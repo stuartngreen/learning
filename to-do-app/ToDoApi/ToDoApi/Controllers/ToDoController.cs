@@ -39,7 +39,7 @@ namespace ToDoApi.Controllers
         [HttpPut("update/{id}")]
         public void UpdateOne(ToDo toDo)
         {
-            _toDoService.UpdateOne(toDo); 
+            _toDoService.UpdateOne(toDo);
         }
 
         [HttpDelete("delete/{id}")]
