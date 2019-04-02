@@ -1,0 +1,26 @@
+<div class="form">
+    <fieldset>
+        Title:
+        <input type="text" [(ngModel)]="newToDo.title" /><br />
+        Description:
+        <textarea [(ngModel)]="newToDo.description"></textarea><br />
+        DueDate:
+        <input type="date" [(ngModel)]="newToDo.dueDate" /><br />
+        Priority:
+        <select [(ngModel)]="newToDo.priority">
+            <option value="3">Low</option>
+            <option value="2">Medium</option>
+            <option value="1">High</option>
+        </select><br />
+        <!-- TODO: Generate CreatedBy from login creds -->
+        CreatedBy:
+        <input type="text" [(ngModel)]="newToDo.createdBy" /><br />
+        Status:
+        <select [(ngModel)]="newToDo.status">
+            <option value="ToDo">To Do</option>
+            <option value="InProgress">In Progress</option>
+            <option value="Completed">Completed</option>
+        </select><br />
+        <button (click)="onSubmit()">Submit</button>
+    </fieldset>
+</div>

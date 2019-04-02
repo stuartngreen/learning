@@ -1,0 +1,26 @@
+
+<div class="form">
+  <fieldset>
+      Title:
+      <input type="text" [(ngModel)]="updateToDo.title" /><br />
+      Description:
+      <textarea [(ngModel)]="updateToDo.description"></textarea><br />
+      DueDate:
+      <input type="date" [(ngModel)]="updateToDo.dueDate.toISOString().split('T')[0]" /><br />
+      Priority:
+      <select>
+          <option [selected]="updateToDo.priority === 3" value="3">Low</option>
+          <option [selected]="updateToDo.priority === 2" value="2">Medium</option>
+          <option [selected]="updateToDo.priority === 1" value="1">High</option>
+      </select><br />
+      CreatedBy:
+      <input type="text" [(ngModel)]="updateToDo.createdBy" /><br />
+      Status:
+      <select>
+          <option [selected]="updateToDo.status.toString === '1'" value="ToDo">To Do</option>
+          <option [selected]="updateToDo.status.toString === '2'" value="InProgress">In Progress</option>
+          <option [selected]="updateToDo.status.toString === '3'" value="Completed">Completed</option>
+      </select><br />
+      <button (click)="onSubmit()">Submit</button>
+  </fieldset>
+</div>

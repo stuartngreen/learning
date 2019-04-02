@@ -1,0 +1,9 @@
+<div class="card">
+    <p>Id: {{ toDoData.id }}</p>
+    <p>Title: {{ toDoData.title }}</p>
+    <p>Description: {{ toDoData.description }}</p>
+    <p>Created by: {{ toDoData.createdBy }}</p>
+    <p>Created at: {{ toDoData.createdAt }}</p>
+    <button (click)="onDeleteClick()">Delete</button>
+    <button (click)="onEditClick()">Edit</button>
+</div>
