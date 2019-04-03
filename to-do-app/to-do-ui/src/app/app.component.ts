@@ -25,6 +25,5 @@ export class AppComponent implements OnInit {
   public setUpdateToDo(toDo: ToDo): void {
     this.updateToDo = toDo;
     this.isUpdatingToDo = true;
-    console.log(this.updateToDo);
   }
 }

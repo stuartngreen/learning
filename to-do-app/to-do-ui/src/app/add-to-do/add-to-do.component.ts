@@ -9,11 +9,12 @@ import { ToDoService } from '../to-do.service';
 })
 export class AddToDoComponent implements OnInit {
 
-  public newToDo: ToDo = new ToDo(null, null, null, null, null, null, null, null);
+  public newToDo: ToDo = new ToDo();
 
-  constructor(private toDoService: ToDoService) { }
+  constructor(private toDoService: ToDoService) {
+  }
 
-  ngOnInit() {
+  public ngOnInit(): void {
   }
 
   public onSubmit(): void {
@@ -24,8 +25,6 @@ export class AddToDoComponent implements OnInit {
 
     // data is now ready in the correct format, can be sent to API
     this.toDoService.insertOne(this.newToDo).subscribe();
-
-    // console.log(this.newToDo);
   }
 
 }

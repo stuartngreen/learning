@@ -45,6 +45,7 @@ namespace ToDoApi
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials());
+
             app.UseMvc();
         }
     }

@@ -8,9 +8,9 @@ namespace ToDo_Domain.Services
 {
     public class ToDoService
     {
-        private readonly ToDoRepository _toDoRepository;
-
         // Do transformations etc. here... for now this service just passes from/to the repo.
+
+        private readonly ToDoRepository _toDoRepository;
 
         public ToDoService()
         {

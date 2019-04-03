@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
 using ToDo_Domain.Entities;
 using ToDo_Domain.Services;
 
@@ -18,13 +19,13 @@ namespace ToDoApi.Controllers
             _toDoService = new ToDoService();
         }
 
-        [HttpGet("all")]
+        [HttpGet]
         public List<ToDo> GetAll()
         {
             return _toDoService.GetAll();
         }
 
-        [HttpGet("all/{id}")]
+        [HttpGet("{id}")]
         public List<ToDo> GetOne(int id)
         {
             return _toDoService.GetAll();
@@ -37,13 +38,14 @@ namespace ToDoApi.Controllers
         }
 
         [HttpPut("update/{id}")]
-        public void UpdateOne(ToDo toDo)
+        public void UpdateOne(ToDo updateToDo, [FromRoute]string id)
         {
-            _toDoService.UpdateOne(toDo); 
+            updateToDo.Id = new ObjectId(id);
+            _toDoService.UpdateOne(updateToDo);
         }
 
         [HttpDelete("delete/{id}")]
-        public void DeleteOne(string id)
+        public void DeleteOne([FromRoute]string id)
         {
             _toDoService.DeleteOne(id);
         }

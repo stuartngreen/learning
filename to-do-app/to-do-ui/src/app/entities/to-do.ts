@@ -1,14 +1,14 @@
 export class ToDo {
 
   constructor(
-    public id: string,
-    public title: string,
-    public description: string,
-    public createdBy: string,
-    public createdAt: Date,
-    public dueDate: Date,
-    public priority: number,
-    public status: string | number
+    public id: string = null,
+    public title: string = null,
+    public description: string = null,
+    public createdBy: string = null,
+    public createdAt: Date = null,
+    public dueDate: Date = null,
+    public priority: number = null,
+    public status: number = null
   ) {
   }
 

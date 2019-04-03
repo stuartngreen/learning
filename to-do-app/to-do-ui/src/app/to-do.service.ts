@@ -13,7 +13,7 @@ export class ToDoService {
 
   public getAllToDos(): Observable<ToDo[]> {
     const toDosObservable = this.http
-      .get('http://localhost:52038/todos/all')
+      .get('http://localhost:52038/todos')
       .pipe(
         map((toDos: any) =>
           toDos.map(
@@ -37,9 +37,7 @@ export class ToDoService {
 
   public insertOne(newToDo: ToDo): Observable<any> {
     delete newToDo.id;
-    const insertObservable = this.http
-      .post('http://localhost:52038/todos', newToDo);
-    return insertObservable;
+    return this.http.post('http://localhost:52038/todos', newToDo);
   }
 
   public deleteOne(id: string): Observable<any> {
@@ -47,6 +45,8 @@ export class ToDoService {
   }
 
   public updateOne(toDo: ToDo): Observable<any> {
-    return this.http.put('http://localhost:52038/todos/update/' + toDo.id, toDo);
+    const updateToDo = Object.assign({}, toDo);
+    delete updateToDo.id;
+    return this.http.put('http://localhost:52038/todos/update/' + toDo.id, updateToDo);
   }
 }
