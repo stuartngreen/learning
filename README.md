@@ -1,2 +1,2 @@
 # learning
-Code for university, books and other courses.
+Code for books and other courses.
