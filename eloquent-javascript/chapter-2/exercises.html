@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testing</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo|Inconsolata" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="exercise-1.js"></script>
+    <script src="exercise-2.js"></script>
+    <script src="exercise-3.js"></script>
+</head>
+<body>
+    
+    <div class="content">
+        <fieldset>
+            <legend>Chapter 2</legend>
+            <div>
+                <label>
+                    <input type="radio" name="exercises" value="ex1" />
+                    <span>Exercise 1: Looping a Triangle</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="exercises" value="ex2" />
+                    <span>Exercise 2: FizzBuzz</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="exercises" value="ex3" checked />
+                    <span>Exercise 3: Chessboard</span>
+                </label>
+            </div>
+            <button onclick="runExercise()">Run Exercise</button>
+        </fieldset>
+
+        <pre id="output"></pre>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function runExercise() {
+        var exercise = document.querySelector('input[name="exercises"]:checked').value;
+
+        switch(exercise) {
+            case 'ex1':
+                loopingTriangle(); return;
+            case 'ex2':
+                fizzBuzz(); return;
+            case 'ex3':
+                chessboard(); return;
+            default:
+                return;
+        }
+    }
+</script>
