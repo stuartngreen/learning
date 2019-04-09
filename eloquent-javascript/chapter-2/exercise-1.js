@@ -1,4 +1,4 @@
-function loopingTriangle() {
+function loopingTriangle(lines) {
     
     // const NO_OF_LINES = 7;
     // let output = '';
@@ -12,11 +12,13 @@ function loopingTriangle() {
     // 
     // document.getElementById('output').innerHTML = output;
 
-    const NO_OF_LINES = 7;
+    if (!lines)
+        lines = 10;
+
     let output = '',
         str = '#';
 
-    for (str; str.length <= NO_OF_LINES; str += '#') {
+    for (str; str.length <= lines; str += '#') {
         // console.log(str);
         output += str + '\n';
     }

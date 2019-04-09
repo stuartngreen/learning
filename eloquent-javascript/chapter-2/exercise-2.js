@@ -1,9 +1,8 @@
-function fizzBuzz() {
+function fizzBuzz(limit) {
 
-    const LIMIT = 100;
     let output = '';
 
-    for (let i = 1; i <= LIMIT; i++) {
+    for (let i = 1; i <= limit; i++) {
         let str = '';
 
         if (i % 3 == 0) {

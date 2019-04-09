@@ -1,12 +1,11 @@
-function chessboard() {
+function chessboard(gridSize) {
 
-    const GRID_SIZE = 8;
     let output = '';
     
-    for (let i = 0; i < GRID_SIZE; i++) {
+    for (let i = 0; i < gridSize; i++) {
         let str = '';
 
-        for (let j = 0; j < GRID_SIZE; j++) {
+        for (let j = 0; j < gridSize; j++) {
             if (i % 2 == 0) {
                 str += (j % 2 == 0 ? ' ' : '#');
             }

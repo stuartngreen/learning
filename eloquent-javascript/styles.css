@@ -16,6 +16,16 @@ body {
     margin: 0;
 }
 
+a {
+    color: royalblue;
+    display: inline-block;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 input,
 button {
     cursor: pointer;
@@ -28,25 +38,26 @@ input[type='radio'] {
     top: 2px;
 }
 
+input[type='text'] {
+    line-height: 20px;
+    margin: 3px 0 3px 3px;
+    padding: 0 4px;
+    width: 50px;
+}
+
 label {
     cursor: pointer;
 }
 
-pre {
-    font-family: 'Inconsolata', monospace;
-    line-height: 16px;
-}
-
 .content {
     box-sizing: border-box;
-    height: 80%;
+    height: 70%;
     margin: 0 auto;
-    max-width: 1400px;
-    min-width: 1000px;
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    top: 34%;
+    transform: translate(-50%,-34%);
+    width: 1100px;
 }
 
 fieldset {
@@ -55,14 +66,17 @@ fieldset {
     border-radius: 2px;
     box-shadow: 1px 1px 0 1px rgba(125,125,125,0.15);
     margin: -9px 0 0 0;
-    padding: 10px 20px 20px 20px;
+    padding: 12px 20px 18px 24px;
     position: absolute;
     width: 48%;
 }
 
 legend {
     font-weight: 600;
+    font-size: 11px;
+    margin-left: -4px;
     padding: 0 8px;
+    text-transform: uppercase;
 }
 
 label {
@@ -70,35 +84,101 @@ label {
 }
 
 button {
-    margin-top: 10px;
+    margin: 10px 0 80px 0;
     padding: 2px 10px;
 }
 
-pre {
+.toc {
     background-color: #fff;
     border: 1px solid #bbb;
     border-radius: 2px;
     box-shadow: 1px 1px 0 1px rgba(125,125,125,0.15);
+    position: relative;
+}
+
+.toc a {
+    line-height: 22px;
+    margin-left: 4px;
+}
+
+nav {
+    background-color: rgba(125,125,125,0.025);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+nav a:first-child {
+    position: absolute;
+    left: 10px;
+}
+
+nav a:last-child {
+    position: absolute;
+    right: 10px;
+}
+
+pre {
+    background-color: navy;
+    border: 1px solid #bbb;
+    border-radius: 2px;
+    box-shadow: 1px 1px 0 1px rgba(125,125,125,0.15);
+    color: aqua;
+    font-family: 'Inconsolata', monospace;
     height: 100%;
+    line-height: 16px;
     margin: 0;
     overflow: auto;
     padding: 12px 15px;
     position: absolute;
+    top: 0;
     right: 0;
     width: 48%;
 }
 
+pre a {
+    color: darkorange;
+}
+
 ::-webkit-scrollbar {
+    height: 6px;
     width: 6px;
 }
  
 ::-webkit-scrollbar-track {
-    background-color: #eee;
-    border-radius: 2px;
+    background-color: #f1f1f1;
 }
  
 ::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 2px;
-    
+    background-color: #c1c1c1;
+    cursor: pointer;
+}
+
+header,
+footer {
+    background-color: #fff;
+    color: #666;
+    font-size: 11px;
+    position: absolute;
+    padding: 8px 0 7px 0;
+    text-align: center;
+    width: 100%;
+}
+
+header a,
+footer a {
+    color: darkorange;
+}
+
+header {
+    border-bottom: 1px solid #bbb;
+    top: 0;
+}
+
+footer {
+    border-top: 1px solid #bbb;
+    bottom: 0;
 }

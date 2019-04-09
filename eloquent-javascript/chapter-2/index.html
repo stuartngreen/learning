@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Testing</title>
+    <title>Eloquent JavaScript - Chapter 2</title>
     <link href="https://fonts.googleapis.com/css?family=Heebo|Inconsolata" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css" />
     <script src="exercise-1.js"></script>
@@ -9,48 +9,60 @@
     <script src="exercise-3.js"></script>
 </head>
 <body>
-    
+
     <div class="content">
         <fieldset>
             <legend>Chapter 2</legend>
             <div>
                 <label>
-                    <input type="radio" name="exercises" value="ex1" />
+                    <input type="radio" name="exercises" value="ex1" checked />
                     <span>Exercise 1: Looping a Triangle</span>
+                    <input type="text" id="linesInput" value="10" />
                 </label>
             </div>
             <div>
                 <label>
                     <input type="radio" name="exercises" value="ex2" />
                     <span>Exercise 2: FizzBuzz</span>
+                    <input type="text" id="limitInput" value="100" />
                 </label>
             </div>
             <div>
                 <label>
-                    <input type="radio" name="exercises" value="ex3" checked />
+                    <input type="radio" name="exercises" value="ex3" />
                     <span>Exercise 3: Chessboard</span>
+                    <input type="text" id="gridInput" value="10" />
                 </label>
             </div>
-            <button onclick="runExercise()">Run Exercise</button>
+            <button onclick="runSolution()">Run Solution</button>
+            <nav>
+                <span></span>
+                <a href="../index.html">Table of Contents</a>
+                <a href="../chapter-3/index.html">Chapter 3 &rsaquo;</a>
+            </nav>
         </fieldset>
-
         <pre id="output"></pre>
     </div>
+
+    <footer>Check out <strong>Eloquent JavaScript</strong> by Marijn Haverbeke <a href="https://eloquentjavascript.net/" target="_blank">here</a>. It's free!</footer>
     
 </body>
 </html>
 
 <script>
-    function runExercise() {
+    function runSolution() {
         var exercise = document.querySelector('input[name="exercises"]:checked').value;
 
         switch(exercise) {
             case 'ex1':
-                loopingTriangle(); return;
+                loopingTriangle(parseInt(document.getElementById('linesInput').value));
+                return;
             case 'ex2':
-                fizzBuzz(); return;
+                fizzBuzz(parseInt(document.getElementById('limitInput').value));
+                return;
             case 'ex3':
-                chessboard(); return;
+                chessboard(parseInt(document.getElementById('gridInput').value));
+                return;
             default:
                 return;
         }

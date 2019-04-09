@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eloquent JavaScript - Chapter 3</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo|Inconsolata" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="exercise-1.js"></script>
+    <script src="exercise-2.js"></script>
+    <script src="exercise-3.js"></script>
+</head>
+<body>
+    
+    <div class="content">
+        <fieldset>
+            <legend>Chapter 3</legend>
+            <div>
+                <label>
+                    <input type="radio" name="exercises" value="ex1" checked />
+                    <span>Exercise 1: Minimum</span>
+                    <input type="text" id="val1Input" value="20" />
+                    <input type="text" id="val2Input" value="10" />
+                </label>
+            </div>
+            <!--
+            <div>
+                <label>
+                    <input type="radio" name="exercises" value="ex2" checked />
+                    <span>Exercise 2: Recursion</span>
+                    <input type="text" id="numInput" value="50" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="exercises" value="ex3" />
+                    <span>Exercise 3: Bean Counting</span>
+                </label>
+            </div>
+            -->
+            <button onclick="runSolution()">Run Solution</button>
+            <nav>
+                <a href="../chapter-2/index.html">&lsaquo; Chapter 2</a>
+                <a href="../index.html">Table of Contents</a>
+                <a href="../chapter-4/index.html">Chapter 4 &rsaquo;</a>
+            </nav>
+        </fieldset>
+        <pre id="output"></pre>
+    </div>
+
+    <footer>Check out <strong>Eloquent JavaScript</strong> by Marijn Haverbeke <a href="https://eloquentjavascript.net/" target="_blank">here</a>. It's free!</footer>
+    
+</body>
+</html>
+
+<script>
+    function runSolution() {
+        var exercise = document.querySelector('input[name="exercises"]:checked').value;
+
+        switch(exercise) {
+            case 'ex1':
+                callMinimum(
+                    parseInt(document.getElementById('val1Input').value),
+                    parseInt(document.getElementById('val2Input').value),
+                );
+                return;
+            case 'ex2':
+                recursion(parseInt(document.getElementById('numInput').value));
+                return;
+            case 'ex3':
+                beanCounting(); return;
+            default:
+                return;
+        }
+    }
+</script>
