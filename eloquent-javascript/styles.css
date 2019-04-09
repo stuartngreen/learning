@@ -45,6 +45,10 @@ input[type='text'] {
     width: 50px;
 }
 
+input.long {
+    width: 150px;
+}
+
 label {
     cursor: pointer;
 }

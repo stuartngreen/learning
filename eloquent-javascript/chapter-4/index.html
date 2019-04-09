@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Eloquent JavaScript - Chapter 3</title>
+    <title>Eloquent JavaScript - Chapter 4</title>
     <link href="https://fonts.googleapis.com/css?family=Heebo|Inconsolata" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css" />
     <script src="exercise-1.js"></script>
     <script src="exercise-2.js"></script>
     <script src="exercise-3.js"></script>
+    <script src="exercise-4.js"></script>
 </head>
 <body>
     
     <div class="content">
         <fieldset>
-            <legend>Chapter 3</legend>
+            <legend>Chapter 4</legend>
             <div>
                 <label>
                     <input type="radio" name="exercises" value="ex1" checked />
-                    <span>Exercise 1: Minimum</span>
-                    <input type="text" id="val1Input" value="20" />
-                    <input type="text" id="val2Input" value="10" />
+                    <span>Exercise 1: The Sum of a Range</span>
                 </label>
             </div>
             <div>
                 <label>
                     <input type="radio" name="exercises" value="ex2" />
-                    <span>Exercise 2: Recursion</span>
-                    <input type="text" id="numInput" value="50" />
+                    <span>Exercise 2: Reversing an Array</span>
                 </label>
             </div>
             <div>
                 <label>
                     <input type="radio" name="exercises" value="ex3" />
-                    <span>Exercise 3: Bean Counting</span>
-                    <input type="text" id="charInput" value="B" />
-                    <input class="long" type="text" id="strInput" value="bubBle BoBBle" />
+                    <span>Exercise 3: A List</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="exercises" value="ex4" />
+                    <span>Exercise 4: Deep Comparison</span>
                 </label>
             </div>
             <button onclick="runSolution()">Run Solution</button>
             <nav>
-                <a href="../chapter-2/index.html">&lsaquo; Chapter 2</a>
+                <a href="../chapter-3/index.html">&lsaquo; Chapter 3</a>
                 <a href="../index.html">Table of Contents</a>
-                <a href="../chapter-4/index.html">Chapter 4 &rsaquo;</a>
+                <span></span>
             </nav>
         </fieldset>
         <pre id="output"></pre>
@@ -57,19 +59,16 @@
 
         switch(exercise) {
             case 'ex1':
-                callMinimum(
-                    parseInt(document.getElementById('val1Input').value),
-                    parseInt(document.getElementById('val2Input').value),
-                );
+                callSumRange();
                 return;
             case 'ex2':
-                recursion(parseInt(document.getElementById('numInput').value));
+                callReverseArray();
                 return;
             case 'ex3':
-                beanCounting(
-                    String(document.getElementById('charInput').value),
-                    String(document.getElementById('strInput').value)
-                );
+                callArrayToList();
+                return;
+            case 'ex4':
+                callDeepEqual();
                 return;
             default:
                 return;
