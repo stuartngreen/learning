@@ -1,7 +1,0 @@
-<app-add-to-do></app-add-to-do>
-
-<app-update-to-do *ngIf="isUpdatingToDo && this.updateToDo" [updateToDo]="updateToDo"></app-update-to-do>
-
-<div *ngFor="let x of toDos">
-    <app-card [toDoData]="x" (toDoEmitter)="setUpdateToDo($event)"></app-card>
-</div>
