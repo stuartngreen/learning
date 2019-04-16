@@ -16,13 +16,15 @@
             <legend>Chapter 4</legend>
             <div>
                 <label>
-                    <input type="radio" name="exercises" value="ex1" checked />
+                    <input type="radio" name="exercises" value="ex1" />
                     <span>Exercise 1: The Sum of a Range</span>
+                    <input type="text" id="startInput" value="5" />
+                    <input type="text" id="endInput" value="10" />
                 </label>
             </div>
             <div>
                 <label>
-                    <input type="radio" name="exercises" value="ex2" />
+                    <input type="radio" name="exercises" value="ex2" checked />
                     <span>Exercise 2: Reversing an Array</span>
                 </label>
             </div>
@@ -59,7 +61,10 @@
 
         switch(exercise) {
             case 'ex1':
-                callSumRange();
+                callSumRange(
+                    parseInt(document.getElementById('startInput').value),
+                    parseInt(document.getElementById('endInput').value)
+                );
                 return;
             case 'ex2':
                 callReverseArray();
