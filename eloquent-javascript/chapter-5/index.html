@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Eloquent JavaScript - Chapter 4</title>
+    <title>Eloquent JavaScript - Chapter 5</title>
     <link href="https://fonts.googleapis.com/css?family=Heebo|Inconsolata" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css" />
     <script src="exercise-1.js"></script>
@@ -13,42 +13,36 @@
     
     <div class="content">
         <fieldset>
-            <legend>Chapter 4</legend>
+            <legend>Chapter 5</legend>
             <div>
                 <label>
                     <input type="radio" name="exercises" value="ex1" checked />
-                    <span>Exercise 1: The Sum of a Range</span>
-                    <input type="text" id="startInput" value="5" />
-                    <input type="text" id="endInput" value="10" />
+                    <span>Exercise 1: Flattening</span>
                 </label>
             </div>
             <div>
                 <label>
                     <input type="radio" name="exercises" value="ex2" />
-                    <span>Exercise 2: Reversing an Array</span>
-                    <input type="text" id="arrayInput" class="long" value="the quick brown fox jumps" />
+                    <span>Exercise 2: Your Own Loop</span>
                 </label>
             </div>
             <div>
                 <label>
                     <input type="radio" name="exercises" value="ex3" />
-                    <span>Exercise 3: A List</span>
-                    <input type="text" id="arrayInput2" class="long" value="the quick brown fox jumps" />
-                    <input type="text" id="prependValInput" value="lazy" />
-                    <input type="text" id="listPosInput" value="2" />
+                    <span>Exercise 3: Everything</span>
                 </label>
             </div>
             <div>
                 <label>
                     <input type="radio" name="exercises" value="ex4" />
-                    <span>Exercise 4: Deep Comparison</span>
+                    <span>Exercise 4: Dominant Writing Direction</span>
                 </label>
             </div>
             <button onclick="runSolution()">Run Solution</button>
             <nav>
-                <a href="../chapter-3/index.html">&lsaquo; Chapter 3</a>
+                <a href="../chapter-4/index.html">&lsaquo; Chapter 4</a>
                 <a href="../index.html">Table of Contents</a>
-                <a href="../chapter-5/index.html">&lsaquo; Chapter 5</a>
+                <span></span>
             </nav>
         </fieldset>
         <pre id="output"></pre>
@@ -65,25 +59,16 @@
 
         switch(exercise) {
             case 'ex1':
-                callSumRange(
-                    parseInt(document.getElementById('startInput').value),
-                    parseInt(document.getElementById('endInput').value)
-                );
+                callFlattening();
                 return;
             case 'ex2':
-                callReverseArray(
-                    document.getElementById('arrayInput').value.split(' ')
-                );
+                callYourOwnLoop();
                 return;
             case 'ex3':
-                callArrayToListToArray(
-                    document.getElementById('arrayInput2').value.split(' '),
-                    document.getElementById('prependValInput').value,
-                    parseInt(document.getElementById('listPosInput').value)
-                );
+                callEverything();
                 return;
             case 'ex4':
-                callDeepEqual();
+                callDominantWritingDirection();
                 return;
             default:
                 return;
