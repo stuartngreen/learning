@@ -1,0 +1,38 @@
+import { BaseElement } from './base-element.js';
+
+export class GoogleMap extends BaseElement {
+
+    constructor(centreOfMap, data) {
+        super();
+        this.centreOfMap = centreOfMap;
+        this.data = data;
+    }
+
+    createElement() {
+        super.createElement();
+
+        setTimeout(() => {
+            var map = new window.google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: this.centreOfMap
+            });
+
+            for (let vehicle of this.data) {
+                let [lat, long] = vehicle.latLong.split(' ');
+                let myLatLng = new window.google.maps.LatLng(lat, long);
+
+                var marker = new window.google.maps.Marker({
+                    position: myLatLng,
+                    map: map
+                });
+
+                marker.setMap(map);
+            }
+        }, 0);
+    }
+
+    getElementString() {
+        return `<div style="width: 800px; height: 400px;" id="map"></div>`;
+    }
+
+}
