@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding: 50px; }
+
+h1 {
+  color: deepskyblue;
+  font-size: 27px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.checker {
+  display: flex;
+  margin: 0 auto;
+  width: 70%; }
+  .checker > div {
+    padding: 30px;
+    width: 50%; }
+    .checker > div fieldset {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      min-height: 350px;
+      padding: 20px 20px 0 20px; }
+      .checker > div fieldset legend {
+        font-weight: 700; }
+    .checker > div.details-form div {
+      align-items: center;
+      display: flex;
+      padding-bottom: 15px; }
+      .checker > div.details-form div label {
+        width: 50%; }
+      .checker > div.details-form div input {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font: inherit;
+        font-weight: 400;
+        padding: 4px 7px;
+        width: 50%; }
+        .checker > div.details-form div input.mark-input {
+          text-align: center;
+          width: 50px; }
+        .checker > div.details-form div input:focus {
+          border-color: dodgerblue;
+          outline: 0; }
+      .checker > div.details-form div button {
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 400;
+        margin: 15px auto 0;
+        padding: 7px 25px; }
+    .checker > div.results span {
+      font-weight: 400; }
+      .checker > div.results span.failed {
+        color: red; }
+      .checker > div.results span.passed {
+        color: green; }
+      .checker > div.results span.distinction {
+        color: deeppink; }

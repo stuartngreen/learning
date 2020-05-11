@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student mark checker</title>
+    <link href="checker.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Student mark checker</h1>
+
+    <div class="checker">
+        <div class="details-form">
+            <fieldset>
+                <legend>Enter the details below:</legend>
+                <div>
+                    <label>Student ID:</label>
+                    <input id="studentId" type="text" value="A123">
+                </div>
+                <div>
+                    <label>Student name:</label>
+                    <input id="studentName" type="text" value="Stuart">
+                </div>
+                <div>
+                    <label>Mark 1:</label>
+                    <input id="mark1" class="mark-input" type="text" value="7">/<input id="total1" class="mark-input" type="text" value="10">
+                </div>
+                <div>
+                    <label>Mark 2:</label>
+                    <input id="mark2" class="mark-input" type="text" value="8">/<input id="total2" class="mark-input" type="text" value="10">
+                </div>
+                <div>
+                    <label>Mark 3:</label>
+                    <input id="mark3" class="mark-input" type="text" value="9">/<input id="total3" class="mark-input" type="text" value="10">
+                </div>
+                <div>
+                    <button onclick="getResults()">Calculate</button>
+                </div>
+            </fieldset>
+        </div>
+        <div class="results">
+            <fieldset>
+                <legend>Results:</legend>
+                <div id="resultsBlock">
+                    Enter the details and click the <strong>Calculate</strong> button.
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+</body>
+<script src="checker.js"></script>
+</html>

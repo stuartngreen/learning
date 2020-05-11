@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding: 50px;
+}
+
+h1 {
+    color: deepskyblue;
+    font-size: 27px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.checker {
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+
+    > div {
+        padding: 30px;
+        width: 50%;
+
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            min-height: 350px;
+            padding: 20px 20px 0 20px;
+
+            legend {
+                font-weight: 700;
+            }
+        }
+
+        &.details-form div {
+            align-items: center;
+            display: flex;
+            padding-bottom: 15px;
+
+            label {
+                width: 50%;
+            }
+
+            input {
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font: inherit;
+                font-weight: 400;
+                padding: 4px 7px;
+                width: 50%;
+
+                &.mark-input {
+                    text-align: center;
+                    width: 50px;
+                }
+
+                &:focus {
+                    border-color: dodgerblue;
+                    outline: 0;
+                }
+            }
+
+            button {
+                cursor: pointer;
+                font-size: 18px;
+                font-weight: 400;
+                margin: 15px auto 0;
+                padding: 7px 25px;
+            }
+        }
+
+        &.results span {
+            font-weight: 400;
+
+            &.failed {
+                color: red;
+            }
+
+            &.passed {
+                color: green;
+            }
+
+            &.distinction {
+                color: deeppink;
+            }
+        }
+    }
+}
+
