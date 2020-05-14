@@ -54,7 +54,7 @@ class CurrentAccount extends Account
             this.transactionHistory.recordTransaction(new Date(), 'Withdrawal', -amount, this.balance);
             
             if (this.balance < 500) {
-                let penalty = (500 - this.balance) / 10;
+                let penalty = (500 - this.balance) / 100;
                 this.balance -= penalty;
                 this.transactionHistory.recordTransaction(new Date(), 'Penalty fee', -penalty, this.balance);
             }
@@ -107,6 +107,10 @@ myAccount.deposit(500);
 myAccount.withdraw(100);
 myAccount.deposit(1000);
 myAccount.withdraw(1500);
+myAccount.withdraw(1500);
+myAccount.withdraw(100);
+myAccount.withdraw(200);
+myAccount.withdraw(100);
 
 myAccount.displayDetails();
 myAccount.displayTransactionHistory();
