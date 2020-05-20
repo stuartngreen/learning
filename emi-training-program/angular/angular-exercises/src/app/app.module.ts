@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { SwitchComponent } from './components/switch/switch.component';
-import { PipesComponent } from './pipes/pipes.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 
 @NgModule({
