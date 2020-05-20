@@ -1,0 +1,42 @@
+<div class="component">
+
+    <div class="component-label">Pipes Component</div>
+
+    <h4>Pipes Examples</h4>
+
+    <table>
+        <tr>
+            <td>uppercase:</td>
+            <td>{{ 'stuart' | uppercase }}</td>
+        </tr>
+        <tr>
+            <td>lowercase:</td>
+            <td>{{ 'STUART' | lowercase }}</td>
+        </tr>
+        <tr>
+            <td>currency:</td>
+            <td>{{ 56789 | currency: 'Rs.' }}</td>
+        </tr>
+        <tr>
+            <td>percent:</td>
+            <td>{{ 0.566789 | percent }}</td>
+        </tr>
+        <tr>
+            <td>slice:</td>
+            <td>{{ months | slice: 2:6 }}</td>
+        </tr>
+        <tr>
+            <td>date:</td>
+            <td>{{ todaysDate | date:'d/M/y' }}</td>
+        </tr>
+        <tr>
+            <td>json:</td>
+            <td>{{ jsonValue | json }}</td>
+        </tr>
+        <tr>
+            <td>decimal (number):</td>
+            <td>{{ 24.5612348949151312 | number: '3.5-5' }}</td>
+        </tr>
+    </table>
+
+</div>
