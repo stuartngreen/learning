@@ -1,0 +1,38 @@
+<div class="component">
+
+    <div class="component-label">Employee Component</div>
+
+    <h4>*ngIf, *ngFor and trackBy Example</h4>
+
+    <button (click)="toggleData()">{{ dataButtonLabel }}</button>
+
+    <ng-container *ngIf="isDataVisible">
+
+        <button (click)="getEmployees()">Add data</button>
+
+        <button (click)="toggleView()">{{ viewButtonLabel }}</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Active?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees; trackBy: trackByEmployeeId">
+                    <ng-container *ngIf="employee.isActive === isActiveView">
+                        <td>{{ employee.id }}</td>
+                        <td>{{ employee.name | uppercase }}</td>
+                        <td>{{ employee.location | lowercase }}</td>
+                        <td>{{ employee.isActive ? 'Yes' : 'No' }}</td>
+                    </ng-container>
+                </tr>
+            </tbody>
+        </table>
+
+    </ng-container>
+
+</div>
