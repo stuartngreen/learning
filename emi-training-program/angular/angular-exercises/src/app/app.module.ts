@@ -32,7 +32,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AlphaCharCounterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

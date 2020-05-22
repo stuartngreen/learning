@@ -1,1 +1,17 @@
-<p>custom-pipes works!</p>
+<div class="component">
+
+    <h4>Custom Pipes</h4>
+
+    <h5>1. exponentCalc Pipe:</h5>
+    <p>Input your own number and exponent.</p>
+    <input class="small" type="text" [(ngModel)]="base" />
+    <input class="small" type="text" [(ngModel)]="exponent" />
+    <p>Answer: {{ base }}<sup>{{ exponent }}</sup> = {{ base | exponentCalc: exponent }}</p>
+    <br />
+
+    <h5>2. Alphabetical Character Counter Pipe:</h5>
+    <p>Input your own text:</p>
+    <input class="long" type="text" [(ngModel)]="inputText" (ngModelChange)="countAlphaChars()" />
+    <p>There are {{ characterCount }} alphabetical characters in the text.</p>
+
+</div>

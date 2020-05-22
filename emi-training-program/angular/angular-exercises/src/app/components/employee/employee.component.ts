@@ -114,6 +114,13 @@ export class EmployeeComponent implements OnInit {
                 location: 'Cape Town',
                 gender: 'Male',
                 isActive: true
+            },
+            {
+                id: 8,
+                name: 'Jan',
+                location: 'Cape Town',
+                gender: 'Male',
+                isActive: false
             }
         ];
     }

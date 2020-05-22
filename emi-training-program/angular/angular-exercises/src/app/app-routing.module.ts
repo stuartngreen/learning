@@ -13,7 +13,7 @@ const routes: Routes = [
     { path: 'data-binding-examples', component: DataBindingExamplesComponent },
     { path: 'pipes-examples', component: PipesExamplesComponent },
     { path: 'switch-example', component: SwitchExampleComponent },
-    { path: '', redirectTo: 'employees', pathMatch: 'full' },
+    { path: '', redirectTo: 'custom-pipes', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent },
 ];
 
