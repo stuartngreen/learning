@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-pipes',
-    templateUrl: './pipes.component.html',
-    styleUrls: ['./pipes.component.scss']
+    selector: 'app-pipes-examples',
+    templateUrl: './pipes-examples.component.html',
+    styleUrls: ['./pipes-examples.component.scss']
 })
-export class PipesComponent implements OnInit {
+export class PipesExamplesComponent implements OnInit {
 
     months: Array<string> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-data-binding',
-    templateUrl: './data-binding.component.html',
-    styleUrls: ['./data-binding.component.scss']
+    selector: 'app-data-binding-examples',
+    templateUrl: './data-binding-examples.component.html',
+    styleUrls: ['./data-binding-examples.component.scss']
 })
-export class DataBindingComponent implements OnInit {
+export class DataBindingExamplesComponent implements OnInit {
 
     public message = 'This is a welcome message.';
 

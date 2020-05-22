@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { IEmployee } from '../../interfaces/employee.interface';
+import { IEmployee } from '../../models/employee.interface';
 
 @Component({
-    selector: 'app-switch',
-    templateUrl: './switch.component.html',
-    styleUrls: ['./switch.component.scss']
+    selector: 'app-switch-example',
+    templateUrl: './switch-example.component.html',
+    styleUrls: ['./switch-example.component.scss']
 })
-export class SwitchComponent implements OnInit {
+export class SwitchExampleComponent implements OnInit {
 
     constructor() { }
 
@@ -17,24 +17,28 @@ export class SwitchComponent implements OnInit {
             id: 1,
             name: 'Mayura',
             location: 'Pune',
+            gender: 'Female',
             isActive: true
         },
         {
             id: 2,
             name: 'Smitha',
             location: 'Bangalore',
+            gender: 'Female',
             isActive: true
         },
         {
             id: 3,
             name: 'James',
             location: 'Chennai',
+            gender: 'Male',
             isActive: true
         },
         {
             id: 4,
             name: 'Swathi',
             location: 'Bangalore',
+            gender: 'Female',
             isActive: true
         }
     ];

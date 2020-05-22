@@ -1,8 +1,6 @@
 <div class="component">
 
-    <div class="component-label">Employee Component</div>
-
-    <h4>*ngIf, *ngFor and trackBy Example</h4>
+    <h4>List of Employees</h4>
 
     <button (click)="toggleData()">{{ dataButtonLabel }}</button>
 
@@ -22,12 +20,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let employee of employees; trackBy: trackByEmployeeId">
+                <tr *ngFor="let employee of employees; trackBy: trackByEmployeeId"
+                    [ngStyle]="{ 'background-color': employee.isActive ? '#eaffe3' : '#ffe8ee' }"
+                >
                     <ng-container *ngIf="employee.isActive === isActiveView">
                         <td>{{ employee.id }}</td>
-                        <td>{{ employee.name | uppercase }}</td>
-                        <td>{{ employee.location | lowercase }}</td>
-                        <td>{{ employee.isActive ? 'Yes' : 'No' }}</td>
+                        <td>{{ employee.name | titlecase }}</td>
+                        <td>{{ employee.location | uppercase }}</td>
+                        <td [ngClass]="{
+                                'status-active': employee.isActive === true,
+                                'status-inactive': employee.isActive === false
+                            }">
+                            {{ employee.isActive ? 'Yes' : 'No' }}
+                        </td>
                     </ng-container>
                 </tr>
             </tbody>

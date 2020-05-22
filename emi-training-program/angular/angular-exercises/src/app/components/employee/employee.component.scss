@@ -1,0 +1,26 @@
+table {
+    width: 600px;
+
+    td {
+        &.status-active {
+            color: green;
+        }
+
+        &.status-inactive {
+            color: red;
+        }
+
+        &:nth-child(1) {
+            width: 20px;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            width: 300px;
+        }
+
+        &:nth-child(4) {
+            width: 80px;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IEmployee } from '../../interfaces/employee.interface';
+import { IEmployee } from '../../models/employee.interface';
 
 @Component({
     selector: 'app-employee',
@@ -8,11 +8,11 @@ import { IEmployee } from '../../interfaces/employee.interface';
 })
 export class EmployeeComponent implements OnInit {
 
-    public isDataVisible = false;
+    public isDataVisible = true;
 
     public isActiveView = true;
 
-    public dataButtonLabel = 'Show data';
+    public dataButtonLabel = this.isDataVisible ? 'Hide data' : 'Show data';
 
     public viewButtonLabel = 'View inactive';
 
@@ -27,19 +27,36 @@ export class EmployeeComponent implements OnInit {
                 id: 1,
                 name: 'Mayura',
                 location: 'Pune',
+                gender: 'Female',
                 isActive: true
             },
             {
                 id: 2,
                 name: 'Sam',
                 location: 'Pune',
+                gender: 'Male',
                 isActive: false
             },
             {
                 id: 3,
                 name: 'Swathi',
                 location: 'Pune',
+                gender: 'Female',
                 isActive: true
+            },
+            {
+                id: 4,
+                name: 'Stuart',
+                location: 'Cape Town',
+                gender: 'Male',
+                isActive: true
+            },
+            {
+                id: 5,
+                name: 'Francois',
+                location: 'Cape Town',
+                gender: 'Male',
+                isActive: false
             }
         ];
     }
@@ -53,31 +70,50 @@ export class EmployeeComponent implements OnInit {
                 id: 1,
                 name: 'Mayura',
                 location: 'Pune',
+                gender: 'Female',
                 isActive: true
             },
             {
                 id: 2,
                 name: 'Sam',
                 location: 'Pune',
+                gender: 'Male',
                 isActive: false
             },
             {
                 id: 3,
                 name: 'Swathi',
                 location: 'Pune',
+                gender: 'Female',
                 isActive: true
             },
             {
                 id: 4,
-                name: 'Swathi',
-                location: 'Pune',
+                name: 'Stuart',
+                location: 'Cape Town',
+                gender: 'Male',
                 isActive: true
             },
             {
                 id: 5,
-                name: 'Swathi',
-                location: 'Pune',
+                name: 'Francois',
+                location: 'Cape Town',
+                gender: 'Male',
                 isActive: false
+            },
+            {
+                id: 6,
+                name: 'Phindi',
+                location: 'Cape Town',
+                gender: 'Female',
+                isActive: true
+            },
+            {
+                id: 7,
+                name: 'Liam',
+                location: 'Cape Town',
+                gender: 'Male',
+                isActive: true
             }
         ];
     }
