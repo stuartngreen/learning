@@ -3,8 +3,7 @@ import { AlphaCharCounterPipe } from 'src/app/pipes/alpha-char-counter.pipe';
 
 @Component({
     selector: 'app-custom-pipes',
-    templateUrl: './custom-pipes.component.html',
-    styleUrls: ['./custom-pipes.component.scss']
+    templateUrl: './custom-pipes.component.html'
 })
 export class CustomPipesComponent implements OnInit {
 

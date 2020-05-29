@@ -3,8 +3,7 @@ import { IEmployee } from '../../models/employee.interface';
 
 @Component({
     selector: 'app-switch-example',
-    templateUrl: './switch-example.component.html',
-    styleUrls: ['./switch-example.component.scss']
+    templateUrl: './switch-example.component.html'
 })
 export class SwitchExampleComponent implements OnInit {
 

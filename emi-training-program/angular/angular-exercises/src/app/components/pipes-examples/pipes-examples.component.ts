@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-pipes-examples',
-    templateUrl: './pipes-examples.component.html',
-    styleUrls: ['./pipes-examples.component.scss']
+    templateUrl: './pipes-examples.component.html'
 })
 export class PipesExamplesComponent implements OnInit {
 

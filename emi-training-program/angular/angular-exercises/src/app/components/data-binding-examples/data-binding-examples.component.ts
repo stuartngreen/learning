@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-data-binding-examples',
-    templateUrl: './data-binding-examples.component.html',
-    styleUrls: ['./data-binding-examples.component.scss']
+    templateUrl: './data-binding-examples.component.html'
 })
 export class DataBindingExamplesComponent implements OnInit {
 
