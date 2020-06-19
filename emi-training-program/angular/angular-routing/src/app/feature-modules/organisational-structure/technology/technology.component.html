@@ -1,0 +1,34 @@
+<app-navigation>
+    <div class="menu-group">
+        <a routerLink="products" routerLinkActive="active">Products</a>
+        <div class="submenu">
+            <a routerLink="products/passport" routerLinkActive="active">Passport</a>
+            <a routerLink="products/isaac" routerLinkActive="active">ISAAC</a>
+            <a routerLink="products/via" routerLinkActive="active">Via</a>
+            <a routerLink="products/shared-services" routerLinkActive="active">Shared Services</a>
+            <a routerLink="products/emea" routerLinkActive="active">EMEA</a>
+        </div>
+    </div>
+    <div class="menu-group">
+        <a routerLink="software-engineering-levels" routerLinkActive="active">Software Engineering Levels</a>
+        <div class="submenu">
+            <a [routerLink]="['software-engineering-levels/employees', 'chief-technology-officer']" routerLinkActive="active">Chief Technology Officer</a>
+            <div class="submenu">
+                <a [routerLink]="['software-engineering-levels/employees', 'director-of-technology']" routerLinkActive="active">Director of Technology</a>
+                <div class="submenu">
+                    <a [routerLink]="['software-engineering-levels/employees', 'head-of-software-engineering']" routerLinkActive="active">Head of Software Engineering</a>
+                    <div class="submenu">
+                        <a [routerLink]="['software-engineering-levels/employees', 'technical-lead']" routerLinkActive="active">Technical Lead</a>
+                        <div class="submenu">
+                            <a [routerLink]="['software-engineering-levels/employees', 'associate-software-engineer']" routerLinkActive="active">Associate Software Engineer</a>
+                            <a [routerLink]="['software-engineering-levels/employees', 'software-engineer']" routerLinkActive="active">Software Engineer</a>
+                            <a [routerLink]="['software-engineering-levels/employees', 'senior-software-engineer']" routerLinkActive="active">Senior Software Engineer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-navigation>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,48 @@
+<app-content-container>
+
+    <h4>EditEmployeeComponent</h4>
+
+    <div *ngIf="employee; else notFound" class="form">
+        <fieldset>
+            <legend>Update the details below:</legend>
+            <div>
+                <label>First name:</label>
+                <input type="text" [value]="employee.firstName" #firstName />
+            </div>
+            <div>
+                <label>Surname:</label>
+                <input type="text" [value]="employee.surname" #surname />
+            </div>
+            <div>
+                <label>Department:</label>
+                <input type="text" [value]="employee.department" #department />
+            </div>
+            <div>
+                <label>Designation:</label>
+                <input type="text" [value]="employee.designation" #designation />
+            </div>
+            <div>
+                <label>Location:</label>
+                <input type="text" [value]="employee.location" #location />
+            </div>
+            <div>
+                <label>Start date:</label>
+                <input type="date" class="half-width" [value]="employee.employmentStartDate | date: 'yyyy-MM-dd'" #startDate />
+            </div>
+            <div>
+                <label>End date:</label>
+                <input type="date" class="half-width" [value]="employee.employmentEndDate | date: 'yyyy-MM-dd'" #endDate />
+            </div>
+            <div class="buttons">
+                <button (click)="onCancel()">Cancel</button>
+                <button (click)="onSave(firstName.value, surname.value, department.value, designation.value,
+                    location.value, startDate.value, endDate.value)">Save</button>
+            </div>
+        </fieldset>
+    </div>
+
+    <ng-template #notFound>
+        An employee with ID number {{ employeeId }} doesn't exist in the data.
+    </ng-template>
+
+</app-content-container>

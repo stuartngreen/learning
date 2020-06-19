@@ -1,0 +1,45 @@
+<app-content-container>
+
+    <h4>EmployeesComponent</h4>
+
+    <div class="layout">
+
+        <div class="scrolling-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Full name</th>
+                        <th class="centered">Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- ; trackBy: trackByEmployeeId -->
+                    <tr *ngFor="let employee of employeeData" [class.selected]="selectedEmployeeId === employee.id">
+                        <td><a [routerLink]="['view', employee.id]">{{ employee.id }}</a></td>
+                        <td>{{ employee.getFullName() }}</td>
+                        <td class="centered">
+                            <i *ngIf="employee.employmentEndDate" class="fas fa-ban" title="Previous employee"></i>
+                            <i *ngIf="!employee.employmentEndDate" class="fas fa-check-circle" title="Current employee"></i>
+                        </td>
+                        <td class="icons">
+                            <a [routerLink]="['view', employee.id]" title="View employee details">
+                                <i class="far fa-list-alt"></i>
+                            </a>
+                            <a [routerLink]="['edit', employee.id]" title="Edit employee details">
+                                <i class="far fa-edit"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+
+</app-content-container>

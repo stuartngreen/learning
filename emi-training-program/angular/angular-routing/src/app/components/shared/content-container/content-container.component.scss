@@ -1,0 +1,27 @@
+.content-container {
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    margin: 20px 10px;
+    padding: 25px;
+
+    ::ng-deep {
+
+        .scrolling-box {
+            background-color: whitesmoke;
+            overflow: auto;
+            max-height: 60vh;
+            padding: 15px;
+        }
+    }
+}
+
+:host-context(app-view-employee),
+:host-context(app-edit-employee) {
+
+    .content-container {
+        box-sizing: border-box;
+        height: 100%;
+        margin: 0;
+    }
+
+}

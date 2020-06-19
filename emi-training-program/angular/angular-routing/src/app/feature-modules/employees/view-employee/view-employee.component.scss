@@ -1,0 +1,11 @@
+table {
+    td {
+        &:first-child {
+            width: 25%;
+        }
+
+        &:last-child {
+            font-weight: 600;
+        }
+    }
+}

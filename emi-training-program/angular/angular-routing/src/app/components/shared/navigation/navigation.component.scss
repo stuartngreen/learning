@@ -1,0 +1,70 @@
+nav {
+    margin: 10px;
+
+    ::ng-deep {
+
+        > a,
+        .menu-group > a {
+            border: 1px solid lightgray;
+            border-radius: 3px;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 5px 12px;
+            position: relative;
+            text-decoration: none;
+
+            &:hover {
+                border-color: deeppink;
+                color: deeppink;
+            }
+
+            &.active {
+                background-color: dodgerblue;
+                border-color: dodgerblue;
+                color: white;
+            }
+        }
+
+        .menu-group {
+            display: inline-block;
+            position: relative;
+
+            .submenu {
+                box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, 0.1);
+                background-color: whitesmoke;
+                border: 1px solid lightgray;
+                border-radius: 0 3px 3px 3px;
+                display: none;
+                margin-top: -2px;
+                min-width: 175px;
+                position: absolute;
+                z-index: 1;
+
+                a {
+                    display: block;
+                    padding: 5px 12px;
+                    text-decoration: none;
+
+                    &.active {
+                        background-color: white;
+                        font-weight: 600;
+                    }
+                }
+
+                .submenu {
+                    margin-left: -20%;
+                    top: 1px;
+                    left: 100%;
+                }
+
+                &:hover > .submenu {
+                    display: block;
+                }
+            }
+
+            &:hover > .submenu {
+                display: block;
+            }
+        }
+    }
+}

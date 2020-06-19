@@ -1,0 +1,35 @@
+.employee-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.employee-card {
+    border-radius: 3px;
+    box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, 0.1);
+    margin: 0 2% 2% 0;
+    max-width: 450px;
+    min-width: 300px;
+    width: 48%;
+
+    h2 {
+        background-color: darkblue;
+        border-radius: 3px 3px 0 0;
+        color: white;
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+        padding: 10px 20px;
+
+        i.fa-user {
+            margin-right: 10px;
+        }
+    }
+
+    > div {
+        background-color: white;
+        border: 1px solid lightgray;
+        border-radius: 0 0 3px 3px;
+        padding: 20px;
+    }
+}

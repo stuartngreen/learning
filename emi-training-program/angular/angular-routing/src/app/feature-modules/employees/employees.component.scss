@@ -1,0 +1,38 @@
+.layout {
+    display: flex;
+
+    > div {
+        max-width: 600px;
+        width: 46%;
+
+        &:nth-child(2) {
+            margin-left: 2%;
+        }
+    }
+}
+
+table {
+
+    tr.selected {
+        background-color: cornsilk;
+    }
+
+    i.fa-ban {
+        color: #d30000;
+    }
+
+    i.fa-check-circle {
+        color: #00be24;
+    }
+
+    .icons {
+        background-color: white;
+        text-align: center;
+
+        i.fa-edit {
+            margin-left: 10px;
+            position: relative;
+            top: -1px;
+        }
+    }
+}

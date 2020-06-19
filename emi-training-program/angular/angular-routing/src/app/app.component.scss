@@ -1,0 +1,25 @@
+// Globally available styles
+
+@import '_text';
+@import '_forms';
+@import '_tables';
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.015rem;
+    line-height: 22px;
+    margin: 20px 10px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+}

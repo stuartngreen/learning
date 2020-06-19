@@ -1,0 +1,20 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+    th {
+        border-bottom: 2px solid lightgray;
+        color: darkslategray;
+        padding: 4px 7px 3px 7px;
+        text-align: left;
+    }
+
+    td {
+        border-bottom: 1px dotted lightgray;
+        padding: 4px 7px 3px 7px;
+    }
+
+    .centered {
+        text-align: center;
+    }
+}

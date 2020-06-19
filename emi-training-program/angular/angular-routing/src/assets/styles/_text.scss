@@ -1,0 +1,19 @@
+a {
+    color: #0075ff;
+
+    &:hover {
+        color: deeppink;
+    }
+}
+
+h4 {
+    color: darkblue;
+    margin: 0 0 20px 0;
+}
+
+h5 {
+    color: gray;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+}

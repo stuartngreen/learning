@@ -1,0 +1,61 @@
+<app-content-container>
+
+    <h4>ViewEmployeeComponent</h4>
+
+    <div *ngIf="employee; else selectEmployee">
+        <table>
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Id:</td>
+                    <td>{{ employee.id }}</td>
+                </tr>
+                <tr>
+                    <td>Full name:</td>
+                    <td>{{ employee.getFullName() }}</td>
+                </tr>
+                <tr>
+                    <td>Department:</td>
+                    <td>{{ employee.department }}</td>
+                </tr>
+                <tr>
+                    <td>Designation:</td>
+                    <td>{{ employee.designation }}</td>
+                </tr>
+                <tr>
+                    <td>Location:</td>
+                    <td>{{ employee.location }}</td>
+                </tr>
+                <tr>
+                    <td>Start date:</td>
+                    <td>{{ employee.employmentStartDate | date: 'longDate' }}</td>
+                </tr>
+                <tr>
+                    <td>End date:</td>
+                    <td>
+                        <ng-container *ngIf="employee.employmentEndDate; else currentEmployee">
+                            {{ employee.employmentEndDate | date: 'longDate' }}
+                        </ng-container>
+                        <ng-template #currentEmployee>Current employee</ng-template>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="form">
+            <div class="buttons">
+                <button (click)="onEdit()">Edit</button>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #selectEmployee>
+        Select an employee from the list on the left.
+    </ng-template>
+
+</app-content-container>
