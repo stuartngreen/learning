@@ -1,0 +1,11 @@
+table {
+    max-width: 500px;
+
+    th:nth-child(4) {
+        width: 115px;
+    }
+}
+
+i.fa-check {
+    color: rgb(1, 168, 1);
+}

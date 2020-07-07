@@ -1,0 +1,40 @@
+.confirm-dialog {
+    // background-color: rgba(white, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 11;
+
+    > div {
+        background-color: white;
+        border: 1px solid rgb(194, 194, 194);
+        border-radius: 3px;
+        box-shadow: 0 3px 7px rgba(black, 0.15);
+        margin-top: -30px;
+        padding: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        width: 350px;
+
+        p {
+            color: orangered;
+            margin: 0 0 20px 0;
+
+            i.fa-exclamation-triangle {
+                margin-right: 5px;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 230px;
+        }
+    }
+}

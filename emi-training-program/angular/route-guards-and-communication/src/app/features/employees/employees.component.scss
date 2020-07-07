@@ -1,0 +1,15 @@
+.layout {
+    display: flex;
+
+    > div {
+        width: 46%;
+
+        &:nth-child(2) {
+            margin-left: 2%;
+        }
+    }
+}
+
+.scrolling-box {
+    margin-bottom: 15px;
+}

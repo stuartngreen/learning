@@ -1,0 +1,20 @@
+<div class="proficiency-modal">
+    <div>
+        <button class="link-style close-button" (click)="onClickClose()">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <!-- <app-rating> is projected here using <ng-content> to demonstrate how @ContentChild works in proficiency-details.component -->
+        <ng-content></ng-content>
+
+        <p>
+            <i class="far fa-comment-alt"></i>
+            <ng-container *ngIf="selectedEmployee.comments; else noComments">{{ selectedEmployee.comments }}</ng-container>
+            <ng-template #noComments>No comments.</ng-template>
+        </p>
+
+        <div class="close-button">
+            <button (click)="onClickClose()">Close</button>
+        </div>
+    </div>
+</div>

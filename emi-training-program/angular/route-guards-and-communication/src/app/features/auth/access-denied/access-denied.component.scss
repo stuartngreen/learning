@@ -1,0 +1,17 @@
+.access-denied {
+    background-color: rgb(255, 230, 233);
+    border: 1px solid darkred;
+    border-radius: 3px;
+    color: darkred;
+    margin-bottom: 20px;
+    max-width: 500px;
+    padding: 25px;
+    text-align: center;
+
+    i.fa-ban {
+        display: inline-block;
+        font-size: 32px;
+        padding-bottom: 5px;
+    }
+
+}

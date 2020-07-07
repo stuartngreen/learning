@@ -1,0 +1,11 @@
+.dotted-box {
+    background-color: lightyellow;
+    border: 1px dashed darkgoldenrod;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 0 50px 0 20px;
+
+    ul {
+        margin-left: -25px;
+    }
+}

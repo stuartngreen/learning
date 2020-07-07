@@ -1,0 +1,19 @@
+<div class="content-container">
+
+    <h4>EmployeesComponent</h4>
+
+    <div class="layout">
+        <div>
+            <div class="scrolling-box">
+                <app-employee-list [employeeData]="employeeData"
+                    (deleteEmployee)="deleteEmployee($event)"
+                ></app-employee-list>
+            </div>
+            <button (click)="onCreate()">Create Employee</button>
+        </div>
+        <div>
+            <router-outlet (activate)="onActivate($event)"></router-outlet>
+        </div>
+    </div>
+
+</div>

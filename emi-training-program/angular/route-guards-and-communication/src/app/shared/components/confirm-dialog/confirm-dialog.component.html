@@ -1,0 +1,12 @@
+<div *ngIf="showDialog" class="confirm-dialog">
+    <div>
+        <p>
+            <i class="fas fa-exclamation-triangle"></i>
+            Your changes will be lost, are you sure?
+        </p>
+        <div class="buttons">
+            <button (click)="confirm(true)">Yes</button>
+            <button (click)="confirm(false)">No</button>
+        </div>
+    </div>
+</div>

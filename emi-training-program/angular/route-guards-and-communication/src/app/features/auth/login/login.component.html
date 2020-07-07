@@ -1,0 +1,45 @@
+<div class="content-container">
+
+    <h4>LoginComponent</h4>
+
+    <ng-container *ngIf="authenticatedUser; else unauthenticated">
+        <div class="form-feedback success">
+            <i class="fas fa-check-circle"></i>
+            <span>Login successful.</span>
+        </div>
+    </ng-container>
+
+    <ng-template #unauthenticated>
+        <div *ngIf="authError" class="form-feedback errors">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>Username or password is incorrect. Try again.</span>
+        </div>
+
+        <div class="form">
+            <fieldset>
+                <legend>Enter your login credentials below:</legend>
+                <div>
+                    <label>Username:</label>
+                    <input type="text" [(ngModel)]="username" />
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input type="password" [(ngModel)]="password" />
+                </div>
+                <div class="buttons">
+                    <button (click)="onLogin()">Login</button>
+                </div>
+            </fieldset>
+        </div>
+        <br>
+
+        <div class="dotted-box">
+            <p><strong>Use these credentials:</strong></p>
+            <ul>
+                <li>admin/password123</li>
+                <li>john/password123 (no admin rights)</li>
+            </ul>
+        </div>
+    </ng-template>
+
+</div>

@@ -1,0 +1,26 @@
+<div class="content-container">
+
+    <h4>UserListComponent</h4>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Name</th>
+                <th>Admin rights?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.name }}</td>
+                <td class="centered">
+                    <i *ngIf="user.adminRights" class="fas fa-check"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

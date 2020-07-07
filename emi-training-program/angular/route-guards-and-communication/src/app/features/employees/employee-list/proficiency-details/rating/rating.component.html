@@ -1,0 +1,12 @@
+<div class="star-rating">
+    <ng-container *ngFor="let number of [].constructor(rating + (maxRating - rating)); index as i;">
+        <i class="fas fa-star" [class.gold]="rating > i"></i>
+    </ng-container>
+</div>
+
+<div class="rating-info">
+    <p>
+        <i class="fas fa-info-circle"></i>
+        {{ message }}
+    </p>
+</div>

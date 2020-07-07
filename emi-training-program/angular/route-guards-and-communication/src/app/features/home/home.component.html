@@ -1,0 +1,69 @@
+<div class="content-container">
+
+    <h4>HomeComponent</h4>
+
+    <p>Route guard implementations:</p>
+    <ul>
+        <li>
+            <p>
+                <strong>CanActivate</strong><br>
+                See the <a routerLink="employees/create">employees/create</a> route in <em>employees-routing.module.ts</em>
+                and <em>auth.guard.ts</em>.
+            </p>
+        </li>
+        <li>
+            <p>
+                <strong>CanDeactivate</strong><br>
+                See the <a routerLink="employees/create">employees/create</a> route in <em>employees-routing.module.ts</em>
+                and <em>create-employee-unsaved-changes.guard.ts</em>.<br>
+                If you enter some data in the form and click "Cancel" the guard prevents routing.
+            </p>
+        </li>
+        <li>
+            <p>
+                <strong>CanLoad</strong><br>
+                See the <a routerLink="users">users</a> route in <em>app-routing.module.ts</em>. The module will only load if
+                you are an admin user.<br>
+                Check the console for "UsersModule loaded." message.
+            </p>
+        </li>
+        <li>
+            <p>
+                <strong>Resolve</strong><br>
+                The <a routerLink="users">users</a> route does not resolve until the user data is loaded.
+                See <em>users-resolve.guard.ts</em>.
+            </p>
+        </li>
+    </ul>
+
+    <p>Component communication implementations:</p>
+    <ul>
+        <li>
+            <p>
+                <strong>@Input()</strong><br>
+                See <em>employee-list.component.ts</em> where the employee data is an input.<br>
+                Also see <em>proficiency-details.component.ts</em> where the selected employee is an input.
+            </p>
+        </li>
+        <li>
+            <p>
+                <strong>@Output()</strong><br>
+                <em>create-employee.compontent.ts</em> emits the employee details to be saved and <em>employee-list.component.ts</em> emits the employee id number to be deleted.<br>
+                See <em>proficiency-details.component.ts</em> and <em>loader.component.ts</em> for more EventEmitters.
+            </p>
+        </li>
+        <li>
+            <p>
+                <strong>@ViewChild()</strong><br>
+                <em>create-employee.component.ts</em> accesses the form in the template using the ViewChild decorator.
+            </p>
+        </li>
+        <li>
+            <p>
+                <strong>@ContentChild()</strong><br>
+                <em>proficiency-details.component.ts</em> accesses the RatingComponent being projected in &lt;ng-content&gt; by using the ContentChild decorator.
+            </p>
+        </li>
+    </ul>
+
+</div>

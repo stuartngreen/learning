@@ -1,0 +1,4 @@
+<app-navigation></app-navigation>
+<router-outlet></router-outlet>
+<app-loader [hidden]="!loading" (loading)="onLoading($event)"></app-loader>
+<app-confirm-dialog></app-confirm-dialog>

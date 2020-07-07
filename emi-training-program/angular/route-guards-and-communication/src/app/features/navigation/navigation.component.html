@@ -1,0 +1,13 @@
+<nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/employees" routerLinkActive="active">Employees Module</a>
+
+    <ng-container *ngIf="authenticatedUser; else unauthenticated">
+        <a routerLink="/users" routerLinkActive="active">Users Module</a>
+        <a (click)="onLogout()">Logout</a>
+    </ng-container>
+
+    <ng-template #unauthenticated>
+        <a routerLink="/login" routerLinkActive="active">Login</a>
+    </ng-template>
+</nav>

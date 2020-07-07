@@ -1,0 +1,27 @@
+i.fa-star {
+    color: lightgray;
+    display: inline-block;
+    font-size: 24px;
+
+    &.gold {
+        color: gold;
+    }
+}
+
+p {
+    background-color: rgba(70, 131, 180, 0.05);
+    border-radius: 3px;
+    color: steelblue;
+    font-size: 11px;
+    line-height: 16px;
+    padding: 5px 5px 5px 25px;
+    position: relative;
+    text-align: left;
+}
+
+i.fa-info-circle {
+    font-size: 14px;
+    position: absolute;
+    left: 5px;
+    top: 6px;
+}

@@ -1,0 +1,40 @@
+<h4>CreateEmployeeComponent</h4>
+
+<div class="form">
+    <form #createEmployeeForm="ngForm">
+        <fieldset>
+            <legend>Enter the details below:</legend>
+            <div>
+                <label>Name:</label>
+                <input type="text" [(ngModel)]="newEmployee.name" name="name" />
+            </div>
+            <div>
+                <label>Location:</label>
+                <input type="text" [(ngModel)]="newEmployee.location" name="location" />
+            </div>
+            <div>
+                <label>Role:</label>
+                <input type="text" [(ngModel)]="newEmployee.role" name="role" />
+            </div>
+            <div class="form-heading">Proficiency:</div>
+            <div>
+                <label>Rating:</label>
+                <select class="short-field" [(ngModel)]="newEmployee.rating" name="rating">
+                    <option>5</option>
+                    <option>4</option>
+                    <option>3</option>
+                    <option>2</option>
+                    <option>1</option>
+                </select>
+            </div>
+            <div>
+                <label>Comments:</label>
+                <textarea [(ngModel)]="newEmployee.comments" name="comments"></textarea>
+            </div>
+            <div class="buttons">
+                <button (click)="onCancel()">Cancel</button>
+                <button (click)="onSave()">Save</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

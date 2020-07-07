@@ -1,0 +1,49 @@
+<ng-container *ngIf="employeeData">
+
+    <h4>EmployeeListComponent</h4>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Role</th>
+                <th>Proficiency</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngIf="employeeData.length > 0; else noEmployeeData">
+                <tr *ngFor="let employee of employeeData">
+                    <td>{{ employee.id }}</td>
+                    <td>{{ employee.name }}</td>
+                    <td>{{ employee.role }}</td>
+                    <td>{{ employee.location }}</td>
+                    <td>
+                        {{ employee.rating }}
+                        <button class="link-style" title="View details" (click)="onClickDetails(employee.id)">
+                            <i class="fas fa-file-alt"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <button *ngIf="authenticatedUser" class="link-style" (click)="onClickDelete(employee.id)" title="Delete">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </td>
+                </tr>
+            </ng-container>
+
+            <ng-template #noEmployeeData>
+                <tr>
+                    <td colspan="6" class="centered">No employee records found.</td>
+                </tr>
+            </ng-template>
+        </tbody>
+    </table>
+
+</ng-container>
+
+<app-proficiency-details *ngIf="selectedEmployee" [selectedEmployee]="selectedEmployee" (clickClose)="closeModal()">
+    <app-rating></app-rating>
+</app-proficiency-details>

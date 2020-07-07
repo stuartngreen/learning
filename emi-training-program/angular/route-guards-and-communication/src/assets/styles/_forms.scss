@@ -1,0 +1,115 @@
+button {
+    background: none;
+    color: #0075ff;
+    cursor: pointer;
+    font: inherit;
+
+    &:not(.link-style) {
+        border: 1px solid lightgray;
+        border-radius: 3px;
+        display: inline-block;
+        padding: 5px 9px;
+        min-width: 100px;
+    }
+
+    &.link-style {
+        border: 0;
+        display: inline;
+    }
+
+    &:hover {
+        border-color: deeppink;
+        color: deeppink;
+    }
+}
+
+.form-feedback {
+    border-radius: 3px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    padding: 10px 15px;
+
+    &.errors {
+        background-color: rgb(255, 230, 233);
+        border: 1px solid darkred;
+        color: darkred;
+    }
+
+    &.success {
+        background-color: rgb(212, 255, 212);
+        border: 1px solid green;
+        color: green;
+    }
+
+    i.fas {
+        margin-right: 10px;
+    }
+}
+
+.form {
+    max-width: 500px;
+
+    .form-heading {
+        border-bottom: 1px dotted lightgrey;
+        color: darkslategray;
+        font-weight: 600;
+        margin-bottom: 5px;
+        padding: 10px 0 4px 0;
+    }
+
+    fieldset {
+        border: 1px solid lightgray;
+        padding: 10px 15px 15px 15px;
+        margin: -10px 0 0 0;
+
+        legend {
+            color: gray;
+            padding: 0 5px;
+        }
+    }
+
+    label {
+        display: inline-block;
+        padding: 5px 10px 0 0;
+        width: 33%;
+    }
+
+    input,
+    select,
+    textarea {
+        border: 1px solid gray;
+        border-radius: 2px;
+        color: darkslategrey;
+        font: inherit;
+        font-weight: 600;
+        padding: 3px 8px;
+        width: 67%;
+
+        &:focus {
+            outline: 0;
+            border-color: dodgerblue;
+        }
+
+        &.short-field {
+            width: 70px;
+        }
+    }
+
+    div {
+        display: flex;
+        padding: 5px 0;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        &.buttons {
+            justify-content: space-between;
+            padding-top: 15px;
+        }
+    }
+}
