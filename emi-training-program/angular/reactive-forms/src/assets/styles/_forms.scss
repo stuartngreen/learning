@@ -1,0 +1,182 @@
+button {
+    background: none;
+    color: #0075ff;
+    cursor: pointer;
+    font: inherit;
+
+    &:not(.link-style) {
+        border: 1px solid lightgray;
+        border-radius: 3px;
+        display: inline-block;
+        padding: 5px 9px;
+        min-width: 100px;
+    }
+
+    &.link-style {
+        border: 0;
+        display: inline;
+    }
+
+    &:hover {
+        border-color: deeppink;
+        color: deeppink;
+    }
+
+    &:disabled {
+        background-color: whitesmoke;
+        border-color: lightgray;
+        color: rgb(180, 180, 180);
+        pointer-events: none;
+    }
+
+    &.add-button {
+        background: slategray;
+        border-radius: 3px;
+        color: white;
+        display: inline-block;
+        padding: 1px 7px;
+        pointer-events: all;
+
+        &:hover {
+            background-color: deeppink;
+        }
+    }
+}
+
+.form-feedback {
+    border-radius: 3px;
+    margin-bottom: 20px;
+    max-width: 700px;
+    padding: 10px 15px;
+
+    &.errors {
+        background-color: rgb(255, 230, 233);
+        border: 1px solid darkred;
+        color: darkred;
+    }
+
+    &.success {
+        background-color: rgb(212, 255, 212);
+        border: 1px solid green;
+        color: green;
+    }
+
+    i.fas {
+        margin-right: 10px;
+    }
+}
+
+.validation-error {
+    background-color: rgb(255, 230, 233);
+    border-radius: 0 0 3px 3px;
+    color: darkred;
+    font-size: 12px;
+    padding: 1px 10px;
+    margin: -5px 0 5px 40%;
+
+    i.fa-exclamation-triangle {
+        margin-right: 5px;
+    }
+
+    .company-names-validation span {
+        &:not(:last-child):after {
+            content: ', ';
+        }
+    }
+}
+
+.form {
+    max-width: 700px;
+
+    .form-heading {
+        border-bottom: 1px dotted lightgrey;
+        color: darkslategray;
+        font-weight: 600;
+        margin-bottom: 10px;
+        padding: 10px 0 4px 0;
+        width: 100%;
+    }
+
+    fieldset {
+        border: 1px solid lightgray;
+        padding: 10px 15px 15px 15px;
+        margin: -10px 0 0 0;
+
+        legend {
+            color: gray;
+            padding: 0 5px;
+        }
+    }
+
+    label {
+        display: inline-block;
+        flex-shrink: 0;
+        padding: 5px 10px 0 0;
+        pointer-events: none;
+        width: 40%;
+    }
+
+    input,
+    select,
+    textarea {
+        border: 1px solid gray;
+        border-radius: 2px;
+        color: darkslategrey;
+        font: inherit;
+        font-weight: 600;
+        padding: 3px 8px;
+        width: 60%;
+
+        &:focus {
+            outline: 0;
+            border-color: dodgerblue;
+        }
+
+        &.short-field {
+            width: 70px;
+        }
+
+        &.date-field {
+            margin-right: 10px;
+            width: 160px;
+        }
+
+        &.ng-invalid:not(.ng-untouched) {
+            border-color: red;
+        }
+    }
+
+    .form-group {
+        background-color: whitesmoke;
+        border: 1px dotted lightgrey;
+        margin-bottom: 10px;
+        padding: 15px 15px 5px 15px;
+    }
+
+    .form-row {
+        display: flex;
+        padding: 5px 0;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        &.buttons {
+            justify-content: space-between;
+            padding-top: 15px;
+        }
+    }
+
+    .skills-group {
+        width: 60%;
+
+        select {
+            margin: 0 10px 10px 0;
+            width: 115px;
+        }
+    }
+}
