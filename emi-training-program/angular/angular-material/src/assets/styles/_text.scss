@@ -1,0 +1,17 @@
+a {
+    color: #0075ff;
+
+    &:hover {
+        color: deeppink;
+    }
+}
+
+h4 {
+    color: darkblue;
+    margin: 0 0 20px 0;
+    font-weight: 500 !important;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}

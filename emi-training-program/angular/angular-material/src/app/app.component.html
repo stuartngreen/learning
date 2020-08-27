@@ -1,0 +1,13 @@
+<mat-sidenav-container>
+
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+        <app-side-nav></app-side-nav>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <button mat-stroked-button color="primary" class="side-nav-trigger" (click)="sidenav.toggle()">Toggle Sidenav</button>
+        <p class="state-text">#sidenav open? {{ opened }}</p>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

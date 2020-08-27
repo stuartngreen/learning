@@ -1,0 +1,32 @@
+<h4>AddUrlModalComponent</h4>
+
+<form [formGroup]="formGroup">
+    <mat-form-field class="half-width">
+        <input matInput placeholder="Id" formControlName="id" required />
+        <mat-error *ngIf="formGroup.controls.id.hasError('required')">Required value</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="From" formControlName="from" required />
+        <mat-error *ngIf="formGroup.controls.from.hasError('required')">Required value</mat-error>
+        <mat-error *ngIf="formGroup.controls.from.hasError('maxlength')">Value exceeds maximum length</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="To" formControlName="to" required />
+        <mat-error *ngIf="formGroup.controls.to.hasError('required')">Required value</mat-error>
+        <mat-error *ngIf="formGroup.controls.to.hasError('maxlength')">Value exceeds maximum length</mat-error>
+    </mat-form-field>
+    <mat-form-field class="half-width">
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="dateCreated" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br />
+    <label>Permanent Link?</label>
+    <mat-radio-group formControlName="permanentLink">
+        <mat-radio-button value="true">Yes</mat-radio-button>
+        <mat-radio-button value="false">No</mat-radio-button>
+    </mat-radio-group>
+</form>
+
+<button mat-stroked-button color="primary" (click)="onSave()" [disabled]="formGroup.status === 'INVALID'">Save</button>
+<button mat-stroked-button color="secondary" (click)="onCancel()">Cancel</button>

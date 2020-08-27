@@ -1,0 +1,11 @@
+@mixin content-container {
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    margin: 20px 0;
+    max-width: 1200px;
+    padding: 25px;
+}
+
+.content-container {
+    @include content-container();
+}

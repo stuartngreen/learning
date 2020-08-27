@@ -1,0 +1,41 @@
+<div class="content-container">
+
+    <h4>UrlListComponent</h4>
+
+    <table mat-table [dataSource]="tableDataSource">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef><strong>Id</strong></th>
+            <td mat-cell *matCellDef="let urlLink">{{ urlLink.id }}</td>
+        </ng-container>
+        <ng-container matColumnDef="from">
+            <th mat-header-cell *matHeaderCellDef>From</th>
+            <td mat-cell *matCellDef="let urlLink">{{ urlLink.from }}</td>
+        </ng-container>
+        <ng-container matColumnDef="to">
+            <th mat-header-cell *matHeaderCellDef>To</th>
+            <td mat-cell *matCellDef="let urlLink">{{ urlLink.to }}</td>
+        </ng-container>
+        <ng-container matColumnDef="dateCreated">
+            <th mat-header-cell *matHeaderCellDef>Date Created</th>
+            <td mat-cell *matCellDef="let urlLink">
+                {{ urlLink.dateCreated | date }}
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="permanentLink">
+            <th mat-header-cell *matHeaderCellDef>Permanent Link?</th>
+            <td mat-cell *matCellDef="let urlLink">
+                {{ urlLink.permanentLink ? "Yes" : "No" }}
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <mat-paginator #paginator
+        [pageSize]="5"
+        [pageSizeOptions]="[5, 10, 20]">
+    </mat-paginator>
+
+    <button mat-stroked-button color="primary" (click)="addUrl()">Add URL</button>
+
+</div>

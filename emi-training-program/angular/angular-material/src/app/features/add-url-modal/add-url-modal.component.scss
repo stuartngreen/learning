@@ -1,0 +1,31 @@
+form {
+    width: 350px;
+
+    mat-form-field {
+        width: 100%;
+
+        &.half-width {
+            width: 50%;
+        }
+    }
+
+    label {
+        color: #888;
+        display: inline-block;
+        margin: 10px 0 5px 0;
+    }
+
+    mat-radio-group {
+        display: block;
+        margin-bottom: 20px;
+        padding: 5px 0;
+
+        mat-radio-button {
+            margin-right: 15px;
+        }
+    }
+}
+
+button[color='primary'] {
+    margin-right: 15px;
+}

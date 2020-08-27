@@ -1,0 +1,21 @@
+.mat-drawer-container {
+    height: 100%;
+
+    .mat-drawer{
+        background-color: whitesmoke;
+        padding: 20px;
+    }
+
+    .mat-drawer-content {
+        background-color: white;
+        padding: 30px;
+
+        button.side-nav-trigger {
+            margin-bottom: 20px;
+        }
+
+        p.state-text {
+            color: darkgoldenrod;
+        }
+    }
+}
