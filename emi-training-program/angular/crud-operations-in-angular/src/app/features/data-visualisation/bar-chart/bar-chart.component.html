@@ -1,0 +1,30 @@
+<h4>BarChartComponent</h4>
+
+<div class="spinner" *ngIf="isLoading">
+    <mat-spinner [diameter]="30"></mat-spinner>
+</div>
+
+<div *ngIf="!isLoading">
+
+    <mat-button-toggle-group [(ngModel)]="chartView" (ngModelChange)="updateChartView()">
+        <mat-button-toggle value="all">All</mat-button-toggle>
+        <mat-button-toggle value="achieved">Achieved</mat-button-toggle>
+        <mat-button-toggle value="notAchieved">Not Achieved</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <div class="horizontal-bar-chart">
+        <div class="legend">
+            <span class="target">Sales Target</span>
+            <span class="achieved">Achieved</span>
+            <span class="not-achieved">Not Achieved</span>
+        </div>
+        <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="false"
+            [chartType]="'horizontalBar'">
+        </canvas>
+    </div>
+
+</div>

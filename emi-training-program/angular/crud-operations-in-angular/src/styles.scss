@@ -1,0 +1,22 @@
+// Globally available styles
+
+@import 'text';
+@import 'mixins';
+@import 'forms';
+
+html, body {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.015rem;
+    line-height: 22px;
+    margin: 0;
+    padding: 20px;
+}

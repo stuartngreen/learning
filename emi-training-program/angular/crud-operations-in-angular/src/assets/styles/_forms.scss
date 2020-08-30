@@ -1,0 +1,22 @@
+.form-feedback {
+    border-radius: 3px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    padding: 10px 15px;
+
+    &.errors {
+        background-color: rgb(255, 230, 233);
+        border: 1px solid darkred;
+        color: darkred;
+    }
+
+    &.success {
+        background-color: rgb(212, 255, 212);
+        border: 1px solid green;
+        color: green;
+    }
+
+    i.far {
+        margin-right: 10px;
+    }
+}

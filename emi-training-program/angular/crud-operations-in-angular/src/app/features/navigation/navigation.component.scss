@@ -1,0 +1,25 @@
+nav {
+    margin-bottom: 20px;
+
+    a {
+        border: 1px solid lightgray;
+        border-radius: 3px;
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 10px;
+        padding: 5px 12px;
+        position: relative;
+        text-decoration: none;
+
+        &:hover {
+            border-color: deeppink;
+            color: deeppink;
+        }
+
+        &.active {
+            background-color: dodgerblue;
+            border-color: dodgerblue;
+            color: white;
+        }
+    }
+}

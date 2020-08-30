@@ -1,0 +1,76 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Mayura Sonar",
+      "designation": "Trainer",
+      "department": "Software Engineering",
+      "gender": "Female",
+      "sales": 10251,
+      "target": 50000
+    },
+    {
+      "id": 2,
+      "name": "Nicole Weber",
+      "designation": "UX Designer",
+      "department": "Product Design and UX",
+      "gender": "Female",
+      "sales": 100253,
+      "target": 150000
+    },
+    {
+      "id": 3,
+      "name": "James Pereira",
+      "designation": "Escalation Manager",
+      "department": "Support",
+      "gender": "Male",
+      "sales": 50684,
+      "target": 50000
+    },
+    {
+      "id": 4,
+      "name": "Smitha Kumar",
+      "designation": "Data Testing Engineer",
+      "department": "Data Science",
+      "gender": "Female",
+      "sales": 89053,
+      "target": 50000
+    },
+    {
+      "id": 5,
+      "name": "Swathi Horwa",
+      "designation": "Technical Lead",
+      "department": "Software Engineering",
+      "gender": "Female",
+      "sales": 120548,
+      "target": 150000
+    },
+    {
+      "id": 6,
+      "name": "Amit Sonar",
+      "designation": "Software Developer",
+      "department": "Technology",
+      "gender": "Male",
+      "sales": 89152,
+      "target": 50000
+    },
+    {
+      "id": 8,
+      "name": "Bob",
+      "designation": "Builder",
+      "department": "Hardware Sales",
+      "gender": "Male",
+      "sales": 2500,
+      "target": 50000
+    },
+    {
+      "id": 9,
+      "name": "Jimmeh",
+      "designation": "Hobo",
+      "department": "Cardboard Sales",
+      "gender": "Asexual",
+      "sales": 0,
+      "target": 50000
+    }
+  ]
+}

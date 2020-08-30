@@ -1,0 +1,14 @@
+a {
+    color: #0075ff;
+    cursor: pointer;
+
+    &:hover {
+        color: deeppink;
+    }
+}
+
+h4 {
+    color: darkblue;
+    font-weight: 500 !important;
+    margin: 0 0 20px 0;
+}

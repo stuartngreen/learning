@@ -1,0 +1,25 @@
+<h4>PieChartComponent</h4>
+
+<div class="spinner" *ngIf="isLoading">
+    <mat-spinner [diameter]="30"></mat-spinner>
+</div>
+
+<!-- <div *ngIf="!isLoading"> -->
+<div>
+
+    <p>Emloyees who have <strong class="achieved">achieved</strong> their sales target vs. those who have <strong class="not-achieved">not achieved</strong> their targets yet:</p>
+
+    <div class="pie-chart">
+        <canvas baseChart
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="'pie'"
+            [options]="pieChartOptions"
+            [colors]="pieChartColors"
+            [legend]="false">
+        </canvas>
+    </div>
+
+    <p>Total number of employees: {{ noOfEmployees }}</p>
+
+</div>

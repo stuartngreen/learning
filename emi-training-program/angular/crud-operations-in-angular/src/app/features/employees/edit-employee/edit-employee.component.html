@@ -1,0 +1,41 @@
+<div class="content-container">
+
+    <h4>EditEmployeeComponent</h4>
+
+    <div class="spinner" *ngIf="isLoading">
+        <mat-spinner [diameter]="30"></mat-spinner>
+    </div>
+
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
+        <mat-form-field class="half-width">
+            <input matInput placeholder="Name" formControlName="name" required />
+            <mat-error *ngIf="formGroup.controls.name.hasError('required')">Required value</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Designation" formControlName="designation" required />
+            <mat-error *ngIf="formGroup.controls.designation.hasError('required')">Required value</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Department" formControlName="department" required />
+            <mat-error *ngIf="formGroup.controls.department.hasError('required')">Required value</mat-error>
+        </mat-form-field>
+        <mat-form-field class="half-width">
+            <input matInput placeholder="Gender" formControlName="gender" />
+        </mat-form-field>
+        <div>
+            <mat-form-field class="half-width">
+                <input matInput placeholder="Current Sales" formControlName="sales" required />
+                <mat-error *ngIf="formGroup.controls.target.hasError('required')">Required value</mat-error>
+                <mat-error *ngIf="formGroup.controls.target.hasError('pattern')">Value must be numeric</mat-error>
+            </mat-form-field>
+            <mat-form-field class="half-width">
+                <input matInput placeholder="Sales Target" formControlName="target" required />
+                <mat-error *ngIf="formGroup.controls.target.hasError('required')">Required value</mat-error>
+                <mat-error *ngIf="formGroup.controls.target.hasError('pattern')">Value must be numeric</mat-error>
+            </mat-form-field>
+        </div>
+        <button mat-stroked-button color="primary" type="submit" [disabled]="!formGroup.valid">Save</button>
+        <button mat-stroked-button color="secondary" (click)="router.navigate(['employees'])">Cancel</button>
+    </form>
+
+</div>
