@@ -1,8 +1,5 @@
-﻿using RegistrationAndLogin.Models.Entities;
-using RegistrationAndLogin.Repositories.Interfaces;
+﻿using RegistrationAndLogin.Repositories.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace RegistrationAndLogin.Services
 {
@@ -12,12 +9,10 @@ namespace RegistrationAndLogin.Services
         private const int MAX_ALLOWED_LOGIN_ATTEMPTS = 3;
 
         private readonly IUserAccountRepository _userAccountRepository;
-        private List<UserAccount> _userAccounts;
 
         public AuthenticationService(IUserAccountRepository userAccountRepository)
         {
             _userAccountRepository = userAccountRepository;
-            _userAccounts = userAccountRepository.GetUserAccounts().ToList();
         }
 
         public void GetCredentials()
@@ -42,7 +37,7 @@ namespace RegistrationAndLogin.Services
 
         private bool AuthenticateUser(string username, string password)
         {
-            var userAccount = _userAccounts.Find(account => account.Username == username);
+            var userAccount = _userAccountRepository.GetAccountByEmail(username);
 
             if (userAccount != null)
             {

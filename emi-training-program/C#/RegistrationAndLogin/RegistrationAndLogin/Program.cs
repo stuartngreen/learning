@@ -9,6 +9,7 @@ namespace RegistrationAndLogin
         static void Main(string[] args)
         {
             var userAccountRepository = new UserAccountRepository();
+            var authenticationService = new AuthenticationService(userAccountRepository);
             var registrationService = new RegistrationService(userAccountRepository);
             string input;
 
@@ -25,7 +26,6 @@ namespace RegistrationAndLogin
                         break;
 
                     case "2":
-                        var authenticationService = new AuthenticationService(userAccountRepository);
                         authenticationService.GetCredentials();
                         break;
 
